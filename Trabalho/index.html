@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Recrutamento Online</title>
+</head>
+<body>
+    <header>
+        <h1>Recrutamento Online</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Cadastre o seu currículo</h2>
+            <form action="https://postman-echo.com/post" method="post" enctype="multipart/form-data">
+                <p>Preencha o formulário abaixo para se candidatar à vaga</p>
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    <!-- campo novo aula 02.09 -->
+                    <div>
+                        <label for="foto_id">Foto:</label>
+                        <input type="file" name="foto" id="foto_id" accept="image/*">
+                    </div>
+
+    
+                    <div> 
+                        <label for="nome_id">Nome Completo:</label>
+                        <input type="text"  name="nome" id="nome_id" placeholder="Digite seu nome completo">
+                    </div>
+
+                    <div>
+                        <label for="telefone_id">Telefone:</label>
+                        <input type="tel" name="telefone" id="telefone_id" required>
+                    </div>
+
+                    <div>
+                        <label for="email_id">E-mail:</label>
+                        <input type="email" name="email" id="email_id">
+                    </div>
+
+                    <div>
+                        <label for="data_nasc_id">Data de Nascimento:</label>
+                        <input type="date" name="dataNasc" id="data_nasc_id">
+                    </div>
+
+                    <fieldset>
+                        <legend>Endereço</legend>
+
+
+                        <div>
+                            <label for="logradouro_id">Logradouro:</label>
+                            <input type="text" name="logradouro" id="logradouro_id">
+                        </div>
+
+                        <div>
+                            <label for="cidade_id">Cidade-UF:</label>
+                            <input type="text" name="cidade" id="cidade_id">
+                        </div>
+
+                        <div>
+                            <label for="numero_id">Número:</label>
+                            <input type="number" name="numero" id="numero_id">
+                        </div>
+
+                    </fieldset>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Resumo</legend>
+                    <div>
+                        <label for="resumo_id">Fale sobre você:</label>
+                        <textarea name="resumo" id="resumo_id"></textarea>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Nível desejado</legend>
+                    <div>
+                        <input type="radio" name="nivel" id="nivel_estagio_id" value="estagio">
+                        <label for="nivel_estagio_id">Estágio</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="nivel" id="nivel_junior_id" value="junior">
+                        <label for="nivel_junior_id">Júnior</label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Tecnologia que domina:</legend>
+                    <div>
+                        <input type="checkbox" name="tecnologias" id="tec_html_id" value="html">
+                        <label for="tec_html_id">HTML</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="tecnologias" id="tec_css_id" value="css">
+                        <label for="tec_css_id">CSS</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" name="tecnologias" id="tec_js_id" value="js">
+                        <label for="tec_js_id">JS</label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Grau de instrução</legend>
+
+                    <div>
+                        <label for="escolaridade_id">Escolaridade:</label>
+                        <select name="escolaridade" id="escolaridade_id">
+                            <option value="medio">Ensino Médio</option>
+                            <option value="graduacao">Graduação</option>
+                            <option value="pos">Pós-graduação</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <div><br>
+                    <button type="reset">Limpar dados</button>
+                    <button type="submit">Enviar Candidatura</button>
+                </div>
+
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Todos os direitos reservados &copy;</p>
+    </footer>
+</body>
+</html>
